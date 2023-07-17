@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 - Exercicio </title>
+
+    <!--Codigo de Javascript-->
+    <script>
+        function receber(){
+
+            var nome1 = document.getElementById("nome1").value
+            var nome2 = document.getElementById("nome2").value
+            var nome3 = document.getElementById("nome3").value
+
+            var nomes = []
+
+            nomes.push(nome1)
+            nomes.push(nome2)
+            nomes.push(nome3)
+          
+            
+
+            document.getElementById("mensagem").innerHTML=nomes 
+            
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="Primeiro Nome" id="nome1">
+        <input type="text" placeholder="Segunddo Nome" id="nome2">
+        <input type="text" placeholder="Treceira Nome" id="nome3">
+        <input type="button" value="Enviar" onclick="receber()">
+    </form>
+
+    <h1 id="mensagem"></h1>
+    
+</body>
+</html>

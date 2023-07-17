@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 Exercício</title>
+
+    <!--Codigo JavaScript-->
+
+    <script>
+
+        function menor(){
+
+            var n1 = parseFloat(document.getElementById("numero1").value);
+            var n2 = parseFloat(document.getElementById("numero2").value);
+            var n3 = parseFloat(document.getElementById("numero3").value);
+            
+          // verificação qual número é maior
+            var menorNumero = n1;
+
+            if(n2 < menorNumero){
+                menorNumero = n2
+            }
+          
+            if(n3 < menorNumero){
+                menorNumero = n3;
+            }
+            document.getElementById("mensagem").innerHTML="O menor número é: " +menorNumero;
+
+        }
+        
+    </script>
+    
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder=" Primeiro número" id="numero1">
+        <input type="text" placeholder=" Segundo número" id="numero2">
+        <input type="text" placeholder=" Treceiro número" id="numero3">
+        <input type="button" value="Enviar" onclick="menor()">
+    
+    </form>
+
+    <h1 id="mensagem"></h1>
+    
+</body>
+</html>

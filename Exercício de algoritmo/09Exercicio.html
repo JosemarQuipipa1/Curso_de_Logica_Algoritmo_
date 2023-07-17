@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Exercicio</title>
+
+    <!--Codigo do Javascript-->
+
+    <script>
+
+        // Obter o número
+        var num = parseInt(document.getElementById("numero").value)
+
+        // Antecessor e Sucessor
+        var antecessor = num - 10;
+        var sucessor = num + 10;
+        
+        function validar(){
+
+            while(antecessor<=sucessor){
+            document.getElementById("mensagem").innerHTML +=antecessor + "<hr>";
+            antecessor ++
+        }
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="Digita o número" id="numero">
+        <input type="Button" value="Enviar" onclick="validar()">
+    </form>
+
+    <h1 id="mensagem"></h1>
+
+    
+</body>
+</html>

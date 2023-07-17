@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Exercício </title>
+
+    <!--Codigo do JavaScript-->
+
+    <script>
+
+        function validar(){
+
+            var l1 = parseInt(document.getElementById("l1").value)
+            var l2 = parseInt(document.getElementById("l2").value)
+            var l3 = parseInt(document.getElementById("l3").value)
+            var l4 = parseInt(document.getElementById("l4").value)
+
+            if(l1==l2 && l2==l3 && l3==l4){
+                document.getElementById("mensagem").innerHTML = " É um quadrado"
+
+            }else{
+
+                document.getElementById("mensagem").innerHTML = " Não é um quadrado"
+            }
+
+
+        }
+        
+
+    </script>
+</head>
+<body>
+    
+    <form>
+
+        <input type="text" placeholder="Lado 1" id="l1">
+        <input type="text" placeholder="Lado 2" id="l2">
+        <input type="text" placeholder="Lado 3" id="l3">
+        <input type="text" placeholder="Lado 4" id="l4">
+        <input type="button" value="Enviar" onclick="validar()" >
+    
+    </form>
+
+    <h1 id="mensagem"></h1>
+
+</body>
+</html>

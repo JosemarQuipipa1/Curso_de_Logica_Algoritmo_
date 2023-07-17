@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Exercício</title>
+
+    <!--Codigo JavaScript-->
+    <script>
+        function acao(){
+
+            // solicitação das notas
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+            var nota3 = parseFloat(document.getElementById("nota3").value)
+
+            // Calculo da média
+            var media = (nota1+nota2+nota3)/3
+
+            // Verificação da situação
+
+            var situacao;
+
+            if((media>=7) &&  (media<=10)){
+                situacao = "Aprovado(a)"
+            } 
+            
+            if((media>=5) && (media<=6.9)){
+                situacao = " Em exame"
+            }
+            
+            if((media>=0) && (media <=4.9 )){
+                situacao = "Reprovado(a)"
+            }
+
+            document.getElementById("mensagem").innerHTML= situacao+" Com a Média"+media.toFixed();
+
+
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Primeira nota" id="nota1">
+        <input type="text" placeholder="Segunda nota" id="nota2">
+        <input type="text" placeholder="Treceira nota" id="nota3">
+        <input type="button" value="Enviar" onclick="acao()">
+
+        <h1 id="mensagem"></h1>
+
+    </form>
+</body>
+</html>

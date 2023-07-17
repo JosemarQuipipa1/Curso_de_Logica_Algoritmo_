@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 - Exercicio </title>
+
+    <!--Codigo de Javascript-->
+    <script>
+        function receber(){
+
+            var nome = document.getElementById("nome1").value
+
+           
+            var nomes = []
+
+            nomes.push("Josemar")
+            nomes.push("Quipipa")
+            nomes.push("Admiro")
+            nomes.push("Branco")
+            nomes.push("Eva")
+
+            var retorno = "Não foi encontrado o nome"
+            
+            for( var i = 0; i< nomes.length; i++){
+
+                if(nomes[i]==nome){
+                    retorno = "Nome encontrado"
+                }
+            }
+            document.getElementById("mensagem").innerHTML = retorno
+        }
+            </script>
+            
+                          
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="Primeiro Número" id="nome1">
+        <input type="button" value="Enviar" onclick="receber()">
+    </form>
+
+    <h1 id="mensagem"></h1>
+    
+</body>
+</html>

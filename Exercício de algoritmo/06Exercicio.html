@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Exercício </title>
+
+    <!--Codigo javascript-->
+
+    <script>
+        function tabuada(){
+
+            var n1 = parseInt(document.getElementById("n1").value)
+
+            for( var i = 1; i<12; i++){
+
+                document.getElementById("mensagem").innerHTML+=+n1+"X"+i+"="+n1*i+"<br>";
+                console.log(i)
+            }
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <form>
+
+        <input type="text" placeholder="Digita o número" id="n1">
+        <input type="button" value="Enviar" onclick="tabuada()">
+    </form>
+
+    <h1 id="mensagem"></h1>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Exercicio </title>
+
+<!--Codigo javascript-->
+
+<script>
+    function mostrar(){
+
+        var n1 = parseInt(document.getElementById("num1").value)
+
+
+        var antecessor = n1 - 10;
+        var sucessor = n1 + 10;
+
+        while(antecessor<=sucessor){
+            document.getElementById("mensagem").innerHTML +=antecessor + "<hr>";
+            antecessor ++
+        }
+           
+        }
+
+
+</script>
+
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="Número Inicial" id="num1">
+        <input type="button" value="Enviar" onclick=" mostrar()">
+    </form>
+    
+    <h1 id="mensagem"></h1>
+</body>
+</html>

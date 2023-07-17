@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 - Exercicio </title>
+
+    <!--Codigo de Javascript-->
+    <script>
+        function receber(){
+
+            var nome1 = parseInt(document.getElementById("nome1").value)
+            var nome2 = parseInt(document.getElementById("nome2").value)
+            var nome3 = parseInt(document.getElementById("nome3").value)
+            var nome4 = parseInt(document.getElementById("nome4").value)
+            var nome5 = parseInt(document.getElementById("nome5").value)
+
+            var nomes = []
+
+            nomes.push(nome1)
+            nomes.push(nome2)
+            nomes.push(nome3)
+            nomes.push(nome4)
+            nomes.push(nome5)
+
+            var maiorNumero = nomes[0];
+
+            for(var i = 0; i<5; i++){
+
+                if(maiorNumero<nomes[i]){
+
+                    maiorNumero=nomes[i]
+
+                }
+                document.getElementById("mensagem").innerHTML+=nomes[i] +"<br>" 
+
+            }
+          
+
+           
+            document.getElementById("mensagem").innerHTML+=" O maior Numero é "+maiorNumero
+            
+        }
+    
+
+    </script>
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="Primeiro Número" id="nome1">
+        <input type="text" placeholder="Segunddo Número" id="nome2">
+        <input type="text" placeholder="Treceira Número" id="nome3">
+        <input type="text" placeholder="Quarto Número" id="nome4">
+        <input type="text" placeholder="Quinto Número" id="nome5">
+        <input type="button" value="Enviar" onclick="receber()">
+    </form>
+
+    <h1 id="mensagem"></h1>
+    
+</body>
+</html>

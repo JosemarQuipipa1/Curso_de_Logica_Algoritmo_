@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Exercicio </title>
+
+<!--Codigo javascript-->
+
+<script>
+    function mostrar(){
+
+        var n1 = parseInt(document.getElementById("num1").value)
+        var n2 = parseInt(document.getElementById("num2").value)
+
+        var contPare = 0;
+        var contImp = 0;
+        var contPositivo = 0;
+        var contNegativo = 0;
+
+        for( var i = n1; i <= n2; i++){
+
+            if(i%2==0){
+               contPare ++
+              
+            }else {
+                contImp ++
+            }
+
+            if(i>=0){
+
+                contPositivo ++
+
+            }else{
+
+                contNegativo ++
+
+            }
+           
+        }
+            document.getElementById("mensagem").innerHTML = "  <br> Pares: " +contPare
+            document.getElementById("mensagem").innerHTML += " <br> Impar: " +contImp
+            document.getElementById("mensagem").innerHTML += " <br> Positivo: " +contPositivo
+            document.getElementById("mensagem").innerHTML += " <br> Negativo: " +contNegativo
+            console.log(i)
+
+    }
+
+
+</script>
+
+
+
+
+</head>
+<body>
+
+
+    <form>
+        <input type="text" placeholder="Número Inicial" id="num1">
+        <input type="text" placeholder="Número Final" id="num2">
+        <input type="button" value="Enviar" onclick=" mostrar()">
+    </form>
+    
+    <h1 id="mensagem"></h1>
+</body>
+</html>

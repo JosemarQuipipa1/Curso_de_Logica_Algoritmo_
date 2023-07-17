@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 21 - Função  </title>
+
+   
+
+    <!--JS-->
+    <script>
+     
+     //Obter media
+     function obterMedia(){
+         // Obter os valores da média
+        var nota1 = parseFloat(document.getElementById("nota1").value);
+        var nota2 = parseFloat(document.getElementById("nota2").value);
+
+        // Realizar o Cálculo da média
+        var media = calculo (nota1 ,nota2);
+
+        // Verificar a situação do aluno
+        var condicao = Situacao(media);
+
+        // Mensagem 
+        document.write("A média é "+media+ " e a situação do Aluno : "+condicao)
+
+    }
+
+     // Cálculo de Média
+
+     function calculo(nota1, nota2){
+        return (nota1 + nota2)/2;
+     }
+
+     // Situação
+     function Situacao(media){
+        //Condicional
+        return media >= 7 ? "Aprovado": "Reprovado";
+     }
+     
+    </script>
+</head>
+<body>
+    <!--Formulário-->
+   <input type = "text" placeholder="Informe a primeira nota" id="nota1">
+   <input type = "text" placeholder="Informe a segunda nota" id="nota2">  
+   <button onclick="obterMedia()">Calcular</button>  
+</body>
+</html>

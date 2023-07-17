@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Exercicio</title>
+
+    <!--Codigo Javascript-->
+    <script>
+
+        var nomes = []
+        var existe = false;
+        
+        function verificar(){
+
+            var nome1 = document.getElementById("nome").value
+
+           
+
+            for(var i=0; i<nomes.length; i++){
+                if(nome1==nome[i]){
+                    existe=true;
+                }
+            }
+
+            if(existe==false){
+                nomes.push(nome1);
+            }else{
+                alert("Nome já existente")
+            }
+
+                document.getElementById("mensagem").innerHTML =nome1
+            }
+        
+
+    </script>
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="Digite um nome" id="nome">
+        <input type="button" value="Enviar" onclick="verificar()">
+
+    </form>
+
+    <h1 id="mensagem"></h1>
+    
+</body>
+</html>
